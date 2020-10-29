@@ -26,6 +26,7 @@ class PerformancePublisherHandler:
 	def run(self):
 		# set thee control rate
 		rate = rospy.Rate(2)
+		self.jetson.start()
 		while not rospy.is_shutdown():
 			self.publish_report()
 			rate.sleep()
